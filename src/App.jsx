@@ -4,18 +4,15 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 // () => {  }
+// Component = HTML + CSS + JavaScript
+const MyComponent = () => {
+  return (
+    <div>Hello Component & Khang Update</div>
+  );
+}
+
 const App = () => {
   const [count, setCount] = useState(0)
-
-  // function myFunction() {
-  //   console.log('>>> run my function');
-  // }
-
-  const myFunction = () => {
-    console.log('>>> run my arrow function');
-  }
-
-  myFunction();
 
   return (
     <>
@@ -28,6 +25,8 @@ const App = () => {
         </a>
       </div>
       <h1>Hello world & hoang khang</h1>
+      {/* Use Component */}
+      <MyComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
