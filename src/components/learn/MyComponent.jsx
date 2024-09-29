@@ -3,7 +3,7 @@
 //JSX
 //Fragment: 1 parent
 // Using CSS: className="" in JSX instead of class in HTML
-// Using Variable in JSX: {variable-name}
+// Using Variable in JSX: {variable-name, expression, ...} -> write javascript code in HTML
 
 import './style.css';
 
