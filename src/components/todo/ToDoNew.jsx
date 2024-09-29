@@ -18,6 +18,7 @@ const ToDoNew = (props) => {
 
     const handleClick = () => {
         addNewToDo(valueInput); // gọi hàm addNewToDo với giá trị valueInput
+        setValueInput(""); // reset giá trị valueInput khi click vào nút Add
     }
 
     const handleOnChange = (name) => {
@@ -28,6 +29,7 @@ const ToDoNew = (props) => {
         <div className="todo-new">
             <input type="text"
                 onChange={(event) => handleOnChange(event.target.value)}
+                value={valueInput}
             />
             <button
                 style={{ cursor: 'pointer' }}
