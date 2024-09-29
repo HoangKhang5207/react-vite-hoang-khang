@@ -20,9 +20,19 @@ const App = () => {
   };
 
   const addNewToDo = (name) => {
-    alert(`call me ${name}`);
+    const newToDo = {
+      id: randomIntFromInterval(1, 1000000),
+      name: name
+    };
+
+    // Không nên thay đổi 'trực tiếp' giá trị của state mà hãy sử dụng cách sau với spread syntax (...) - Copy
+    setTodoList([...todoList, newToDo]);
   }
   // addNewToDo();
+
+  const randomIntFromInterval = (min, max) => { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
 
   // Props: {key:value}
   return (

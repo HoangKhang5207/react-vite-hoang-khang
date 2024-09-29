@@ -17,7 +17,7 @@ const ToDoNew = (props) => {
     // addNewToDo("HKhang");
 
     const handleClick = () => {
-        console.log(valueInput);
+        addNewToDo(valueInput); // gọi hàm addNewToDo với giá trị valueInput
     }
 
     const handleOnChange = (name) => {
