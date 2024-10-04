@@ -2,6 +2,8 @@
 import './components/todo/todo.css';
 import ToDoNew from './components/todo/ToDoNew';
 import ToDoData from './components/todo/ToDoData';
+import Header from './components/layout/header';
+import Footer from './components/layout/footer';
 import ReactLogo from './assets/react.svg';
 import { useState } from 'react';
 
@@ -34,24 +36,26 @@ const App = () => {
 
   // Props: {key:value}
   return (
-    <div className="todo-container">
-      <div className="todo-title">Todo List</div>
-      <ToDoNew
-        addNewToDo={addNewToDo}
-      />
-
-      {todoList.length > 0 ?
-        <ToDoData
-          todoList={todoList}
-          deleteToDo={deleteToDo}
+    <>
+      <Header />
+      <div className="todo-container">
+        <div className="todo-title">Todo List</div>
+        <ToDoNew
+          addNewToDo={addNewToDo}
         />
-        :
-        <div className="todo-image">
-          <img src={ReactLogo} className='logo' />
-        </div>
-      }
 
-      {/* {todoList.length > 0 &&
+        {todoList.length > 0 ?
+          <ToDoData
+            todoList={todoList}
+            deleteToDo={deleteToDo}
+          />
+          :
+          <div className="todo-image">
+            <img src={ReactLogo} className='logo' />
+          </div>
+        }
+
+        {/* {todoList.length > 0 &&
         <ToDoData
           todoList={todoList}
         />
@@ -62,8 +66,9 @@ const App = () => {
           <img src={ReactLogo} className='logo' />
         </div>
       } */}
-
-    </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
