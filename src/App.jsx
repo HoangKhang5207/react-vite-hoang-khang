@@ -6,6 +6,7 @@ import Header from './components/layout/header';
 import Footer from './components/layout/footer';
 import ReactLogo from './assets/react.svg';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
 
@@ -67,6 +68,7 @@ const App = () => {
         </div>
       } */}
       </div>
+      <Outlet />
       <Footer />
     </>
   )
